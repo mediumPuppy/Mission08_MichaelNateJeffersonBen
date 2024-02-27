@@ -6,6 +6,13 @@ namespace Mission08_MichaelNateJeffersonBen.Controllers
 {
     public class HomeController : Controller
     {
+        //private ITaskRepository _repo;
+
+        //public HomeController(ITaskRepository temp)
+        //{
+        //    _repo = temp;
+        //}
+
         public IActionResult Index()
         {
             return View();
@@ -22,9 +29,7 @@ namespace Mission08_MichaelNateJeffersonBen.Controllers
         //    if (ModelState.IsValid)
         //    {
         //        //Add record to the database and save it
-        //        _context.Model.Add(response);
-        //        _context.SaveChanges();
-
+        //        _repo.AddTask(response)
         //        return View("Confirmation");
         //    }
         //    else
