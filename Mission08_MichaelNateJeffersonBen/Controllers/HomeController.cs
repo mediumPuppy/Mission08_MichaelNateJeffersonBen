@@ -6,12 +6,12 @@ namespace Mission08_MichaelNateJeffersonBen.Controllers
 {
     public class HomeController : Controller
     {
-        //private ITaskRepository _repo;
+        private ITaskRepository _repo;
 
-        //public HomeController(ITaskRepository temp)
-        //{
-        //    _repo = temp;
-        //}
+        public HomeController(ITaskRepository temp)
+        {
+            _repo = temp;
+        }
 
         public IActionResult Index()
         {
@@ -21,24 +21,17 @@ namespace Mission08_MichaelNateJeffersonBen.Controllers
         [HttpGet]
         public IActionResult Update()
         {
-            return View();
+            return View(new TaskData());
         }
-        //[HttpPost]
-        //public IActionResult Update(Model response) 
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        //Add record to the database and save it
-        //        _repo.AddTask(response)
-        //        return View("Confirmation");
-        //    }
-        //    else
-        //    {
-        //        ViewBag.Blah = _context.Blah
-        //        .OrderBy(x => x.Category)
-        //        .ToList();
-        //        return View(response);
-        //    }
-        //}
+        [HttpPost]
+        public IActionResult Update(TaskData response)
+        {
+            if (ModelState.IsValid)
+            {
+                //Add record to the database and save it
+                _repo.AddTask(response);
+            }
+                return View(new TaskData());
+        }
     }
 }
