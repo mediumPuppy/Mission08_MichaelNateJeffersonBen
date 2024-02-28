@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Mission08_MichaelNateJeffersonBen.Models;
 
-public partial class TaskDatum
+public partial class TaskData
 {
     public int TaskId { get; set; }
 
