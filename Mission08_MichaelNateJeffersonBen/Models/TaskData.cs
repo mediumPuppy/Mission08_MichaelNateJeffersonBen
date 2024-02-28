@@ -7,7 +7,7 @@ public partial class TaskData
 {
     public int TaskId { get; set; }
 
-    public decimal TaskName { get; set; }
+    public string TaskName { get; set; }
 
     public string DueDate { get; set; } = null!;
 
