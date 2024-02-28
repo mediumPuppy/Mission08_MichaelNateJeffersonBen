@@ -10,9 +10,9 @@ namespace Mission08_MichaelNateJeffersonBen.Models
             _context = temp;
         }
 
-        public List<Task> TaskNames => _context.TaskNames.ToList();
+        public List<TaskData> TaskData => _context.TaskData.ToList();
 
-        public void AddTask(Task task)
+        public void AddTask(TaskData task)
         {
             _context.Add(task);
             _context.SaveChanges();
