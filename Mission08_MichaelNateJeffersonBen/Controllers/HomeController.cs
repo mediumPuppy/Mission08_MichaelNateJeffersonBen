@@ -24,6 +24,15 @@ namespace Mission08_MichaelNateJeffersonBen.Controllers
             ViewBag.Quadrant1 = _repo.TaskData
                 .Where(x => x.Quadrant == "Important-Urgent")
                 .ToList();
+            ViewBag.Quadrant2 = _repo.TaskData
+                .Where(x => x.Quadrant == "Important-Not Urgent")
+                .ToList();
+            ViewBag.Quadrant3 = _repo.TaskData
+                .Where(x => x.Quadrant == "Not Important-Urgent")
+                .ToList();
+            ViewBag.Quadrant4 = _repo.TaskData
+                .Where(x => x.Quadrant == "Not Important-Not Urgent")
+                .ToList();
             return View();
         }
 
