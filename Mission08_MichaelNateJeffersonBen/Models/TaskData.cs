@@ -1,15 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace Mission08_MichaelNateJeffersonBen.Models;
 
 public partial class TaskData
 {
+    [Key]
+    [Required]
     public int TaskID { get; set; }
 
+  
     public string TaskName { get; set; }
 
-    public string DueDate { get; set; } = null!;
+    public string? DueDate { get; set; }
 
     public string Quadrant { get; set; } = null!;
 
