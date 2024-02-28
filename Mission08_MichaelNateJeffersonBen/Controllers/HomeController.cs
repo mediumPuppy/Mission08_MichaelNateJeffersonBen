@@ -18,6 +18,11 @@ namespace Mission08_MichaelNateJeffersonBen.Controllers
             return View();
         }
 
+        public IActionResult QuadrantView()
+        {
+            return View();
+        }
+
         [HttpGet]
         public IActionResult Update()
         {
