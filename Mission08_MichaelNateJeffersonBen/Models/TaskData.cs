@@ -17,7 +17,7 @@ public partial class TaskData
 
     public string Quadrant { get; set; } = null!;
 
-    public string Category { get; set; } = null!;
+    public string? Category { get; set; } = null!;
 
-    public int Completed { get; set; }
+    public int? Completed { get; set; }
 }
