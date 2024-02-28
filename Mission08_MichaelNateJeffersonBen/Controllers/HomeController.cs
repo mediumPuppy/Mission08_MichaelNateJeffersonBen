@@ -31,7 +31,7 @@ namespace Mission08_MichaelNateJeffersonBen.Controllers
                 //Add record to the database and save it
                 _repo.AddTask(response);
             }
-                return View(new TaskData());
+            return View("Confirmation");
         }
     }
 }
