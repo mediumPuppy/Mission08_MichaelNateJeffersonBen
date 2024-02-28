@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Mission08_MichaelNateJeffersonBen.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
 </head>
 <body>
     <header>
@@ -25,6 +26,9 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Update">Add/Edit</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="QuadrantView">All Tasks</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -36,10 +40,54 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - ByteBrigade 
+    <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>
+          <small class="d-block mb-3 text-muted">&copy; ByteBrigade</small>
         </div>
+        <div class="col-6 col-md">
+          <h5>Features</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://www.coolmathgames.com/">Cool stuff</a></li>
+            <li><a class="text-muted" href="https://theuselessweb.com/">Random feature</a></li>
+            <li><a class="text-muted" href="https://sliding.toys/mystic-square/8-puzzle/daily/">Team feature</a></li>
+            <li><a class="text-muted" href="https://roadmap.sh/">Stuff for developers</a></li>
+            <li><a class="text-muted" href="https://alwaysjudgeabookbyitscover.com/">For a Cat</a></li>
+            <li><a class="text-muted" href="https://puginarug.com/">Dawg</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://urbandictionary.com/define.php?term=secret+sauce">Secret Sauce</a></li>
+            <li><a class="text-muted" href="https://vimeo.com/611952155">Ninja Skills</a></li>
+            <li><a class="text-muted" href="https://www.youtube.com/watch?v=QqC5028obX0">Magic Beans</a></li>
+            <li><a class="text-muted" href="https://static.wikia.nocookie.net/great-characters/images/d/d8/Jacksparrow.jpeg/revision/latest?cb=20190323132109">Pirate's Treasure</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://giphy.com/gifs/americanidol-american-idol-jennifer-lopez-xiii-cbWQm0HonZORq">Business</a></li>
+            <li><a class="text-muted" href="https://giphy.com/clips/studiosoriginals-monday-vonSr61Q6zmWNIxxnb">Education</a></li>
+            <li><a class="text-muted" href="https://giphy.com/gifs/clinton-administration-dAvvMX8BLOvCg">Government</a></li>
+            <li><a class="text-muted" href="https://store.steampowered.com/">Gaming</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="https://www.wizardingworld.com/">Wizard's Spellbook</a></li>
+            <li><a class="text-muted" href="https://www.youtube.com/watch?v=Q38TFmg6jDo">Alien Technology</a></li>
+            <li><a class="text-muted" href="https://archive.org/web/">Time Machine</a></li>
+            <li><a class="text-muted" href="https://www.flyingcarpets.com/">Flying Carpet</a></li>
+            <li><a class="text-muted" href="https://poki.com/en/g/dragon-simulator-3d">Dragon's Lair</a></li>
+            <li><a class="text-muted" href="https://www.crazygames.com/game/robot-unicorn-attack">Unicorn Meadows</a></li>
+            <li><a class="text-muted" href="https://www.atlantisbahamas.com/resortmap">Atlantis Maps</a></li>
+          </ul>
+        </div>
+      </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

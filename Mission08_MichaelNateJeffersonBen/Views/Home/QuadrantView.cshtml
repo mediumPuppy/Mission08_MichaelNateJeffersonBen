@@ -1,0 +1,77 @@
+﻿@model List<TaskData>
+
+<div class="container mt-5">
+    <div class="text-center mb-4">
+        <h2>Stephen Covey's Time Management Matrix</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="border p-3">
+                <h4>Urgent & Important</h4>
+                <div class="border-top">
+                    <strong>Quadrant 1</strong>
+                    <ul class="list-unstyled">
+                        @if (ViewBag.Quadrant1 != null)
+                        {
+                            foreach (var item in ViewBag.Quadrant1)
+                            {
+                                <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="border p-3">
+                <h4>Important & Not Urgent</h4>
+                <div class="border-top">
+                    <strong>Quadrant 2</strong>
+                    <ul class="list-unstyled">
+                        @if (ViewBag.Quadrant2 != null)
+                        {
+                            foreach (var item in ViewBag.Quadrant2)
+                            {
+                                <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="border p-3">
+                <h4>Urgent & Not Important</h4>
+                <div class="border-top">
+                    <strong>Quadrant 3</strong>
+                    <ul class="list-unstyled">
+                        @if (ViewBag.Quadrant3 != null)
+                        {
+                              @foreach (var item in ViewBag.Quadrant3) 
+                              {
+                                  <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                              }   
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="border p-3">
+                <h4>Not Important Or Urgent</h4>
+                <div class="border-top">
+                    <strong>Quadrant 4</strong>
+                    <ul class="list-unstyled">
+                        @if (ViewBag.Quadrant4 != null)
+                        {
+                              @foreach (var item in ViewBag.Quadrant4) 
+                              {
+                                  <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                              }   
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
