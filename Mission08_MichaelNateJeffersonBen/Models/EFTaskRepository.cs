@@ -17,5 +17,16 @@ namespace Mission08_MichaelNateJeffersonBen.Models
             _context.Add(task);
             _context.SaveChanges();
         }
+
+        public void Update(TaskData task)
+        {
+            _context.Update(task);
+            _context.SaveChanges();
+        }
+        public void Delete(TaskData task)
+        {
+            _context.Remove(task);
+            _context.SaveChanges();
+        }
     }
 }

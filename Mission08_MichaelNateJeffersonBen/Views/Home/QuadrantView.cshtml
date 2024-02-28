@@ -1,4 +1,6 @@
-﻿<div class="container mt-5">
+﻿@model List<TaskData>
+
+<div class="container mt-5">
     <div class="text-center mb-4">
         <h2>Stephen Covey's Time Management Matrix</h2>
     </div>
@@ -9,11 +11,15 @@
                 <div class="border-top">
                     <strong>Quadrant 1</strong>
                     <ul class="list-unstyled">
-                        <!-- @* Uncomment and use this code to dynamically generate list items from a ViewBag
-                        @foreach (var item in ViewBag.Quadrant1) {
-                            <li>@item.Name <a href="/edit/@item.Id">Edit</a> <a href="/delete/@item.Id">Delete</a></li>
+                        @if (ViewBag.Quadrant1 != null)
+                        {
+                            foreach (var item in ViewBag.Quadrant1)
+                            {
+                                <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                            }
                         }
-                        *@ -->
+
+                        
                         <li>Crises <a href="/edit/1">Edit</a> <a href="/delete/1">Delete</a></li>
                         <li>Pressing Problems <a href="/edit/2">Edit</a> <a href="/delete/2">Delete</a></li>
                         <li>Projects with Deadlines <a href="/edit/3">Edit</a> <a href="/delete/3">Delete</a></li>

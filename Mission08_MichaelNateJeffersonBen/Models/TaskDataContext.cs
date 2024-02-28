@@ -25,9 +25,9 @@ public partial class TaskDataContext : DbContext
     {
         modelBuilder.Entity<TaskData>(entity =>
         {
-            entity.HasKey(e => e.TaskId);
+            entity.HasKey(e => e.TaskID);
 
-            entity.Property(e => e.TaskId).HasColumnName("TaskID");
+            entity.Property(e => e.TaskID).HasColumnName("TaskID");
             entity.Property(e => e.TaskName).HasColumnType("NUMERIC");
         });
 

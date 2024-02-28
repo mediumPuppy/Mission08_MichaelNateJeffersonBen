@@ -5,7 +5,7 @@ namespace Mission08_MichaelNateJeffersonBen.Models;
 
 public partial class TaskData
 {
-    public int TaskId { get; set; }
+    public int TaskID { get; set; }
 
     public string TaskName { get; set; }
 

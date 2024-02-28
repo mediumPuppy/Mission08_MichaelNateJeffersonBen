@@ -1,0 +1,17 @@
+﻿@model TaskData
+
+<!--This is a simple page users will be taken to when clicking on a movie to delete
+    This page requires them to confirm the deletion or cancel and go back to the table
+-->
+
+<h2>Confirm Deletion</h2>
+<h3>@Model.TaskName</h3>
+
+<form method="post">
+
+    <input type="hidden" asp-for="TaskID" />
+
+    <button type="submit">Delete</button>
+    <a class="btn btn-info" asp-controller="Home" asp-action="QuadrantView">Cancel</a>
+
+</form>
