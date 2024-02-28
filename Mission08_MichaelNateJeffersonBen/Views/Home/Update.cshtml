@@ -3,27 +3,44 @@
 *@
 @{
 }
+@model TaskDatum
 
-@* <form method="post">
-    <label asp-for="Task">Task:</label>
-    <input asp-for="Task" />
+<h1>Add/Edit Tasks<h1>
+
+ <form method="post">
+    <input type="hidden" asp-for="TaskId">
+    <label asp-for="TaskName">Task:</label>
+    <input asp-for="TaskName" />
+    <br />
     <label asp-for="DueDate">Due Date:</label>
     <input asp-for="DueDate" />
+    <br />
     <label asp-for="Quadrant">Quadrant:</label>
     <input asp-for="Quadrant" />
+    <br />
     <label asp-for="Category">Category:</label>
+    <br />
     <select asp-for="Category">
+        <option value="">Select An Option</option>
         <option value="Home">Home</option>
         <option value="School">School</option>
         <option value="Work">Work</option>
         <option value="Church">Church</option>
 
     </select>
+    <br />
     <label asp-for="Completed">Completed:</label>
+    <br />
     <select asp-for="Completed">
         <option value="1">Yes</option>
         <option value="0">No</option>
     </select>
+    <br />
+    <br />
 
+    
+    <button type="submit">Submit</button>
 
-</form> *@
+    <div asp-validation-summary="All"></div>
+
+</form> 
