@@ -7,7 +7,7 @@
     <div class="row">
         <div class="col-md-6">
             <div class="border p-3">
-                <h4>Urgent</h4>
+                <h4>Urgent & Important</h4>
                 <div class="border-top">
                     <strong>Quadrant 1</strong>
                     <ul class="list-unstyled">
@@ -24,7 +24,7 @@
         </div>
         <div class="col-md-6">
             <div class="border p-3">
-                <h4>Not Urgent</h4>
+                <h4>Important & Not Urgent</h4>
                 <div class="border-top">
                     <strong>Quadrant 2</strong>
                     <ul class="list-unstyled">
@@ -41,38 +41,34 @@
         </div>
         <div class="col-md-6">
             <div class="border p-3">
-                <h4>Not Important</h4>
+                <h4>Urgent & Not Important</h4>
                 <div class="border-top">
                     <strong>Quadrant 3</strong>
                     <ul class="list-unstyled">
-                        <!-- @* Uncomment and use this code to dynamically generate list items from a ViewBag
-                        @foreach (var item in ViewBag.Quadrant3) {
-                            <li>@item.Name <a href="/edit/@item.Id">Edit</a> <a href="/delete/@item.Id">Delete</a></li>
+                        @if (ViewBag.Quadrant3 != null)
+                        {
+                              @foreach (var item in ViewBag.Quadrant3) 
+                              {
+                                  <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                              }   
                         }
-                        *@ -->
-                        <li>Interruptions <a href="/edit/7">Edit</a> <a href="/delete/7">Delete</a></li>
-                        <li>Some Phone Calls <a href="/edit/8">Edit</a> <a href="/delete/8">Delete</a></li>
-                        <li>Some Mail <a href="/edit/9">Edit</a> <a href="/delete/9">Delete</a></li>
-                        <li>Some Reports <a href="/edit/10">Edit</a> <a href="/delete/10">Delete</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="col-md-6">
             <div class="border p-3">
-                <h4>Not Important</h4>
+                <h4>Not Important Or Urgent</h4>
                 <div class="border-top">
                     <strong>Quadrant 4</strong>
                     <ul class="list-unstyled">
-                        <!-- @* Uncomment and use this code to dynamically generate list items from a ViewBag
-                        @foreach (var item in ViewBag.Quadrant4) {
-                            <li>@item.Name <a href="/edit/@item.Id">Edit</a> <a href="/delete/@item.Id">Delete</a></li>
+                        @if (ViewBag.Quadrant4 != null)
+                        {
+                              @foreach (var item in ViewBag.Quadrant4) 
+                              {
+                                  <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                              }   
                         }
-                        *@ -->
-                        <li>Busy Work <a href="/edit/11">Edit</a> <a href="/delete/11">Delete</a></li>
-                        <li>Some Phone Calls <a href="/edit/12">Edit</a> <a href="/delete/12">Delete</a></li>
-                        <li>Some Mail <a href="/edit/13">Edit</a> <a href="/delete/13">Delete</a></li>
-                        <li>Time Wasters <a href="/edit/14">Edit</a> <a href="/delete/14">Delete</a></li>
                     </ul>
                 </div>
             </div>
