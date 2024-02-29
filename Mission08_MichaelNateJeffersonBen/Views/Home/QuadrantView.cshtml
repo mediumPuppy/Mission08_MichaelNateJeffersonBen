@@ -16,15 +16,18 @@
                     <ul class="list-unstyled">
                         @if (ViewBag.Quadrant1 != null)
                         {
-                            foreach (var item in ViewBag.Quadrant1)
+                            @foreach (var item in ViewBag.Quadrant1)
                             {
                                 <!-- a for each loop to display all data needced on this view-->
-                                <li class="row bd-highlight align-items-center">
-                                    <div class="col-5">@item.TaskName</div>
-                                    <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div>
-                                    <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a></div>
-                                    <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div>
-                                </li>
+                                if (item.Completed == 0)
+                                {
+                                    <li class="row bd-highlight align-items-center">
+                                        <div class="col-5">@item.TaskName</div>
+                                        <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div>
+                                        <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a></div>
+                                        <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div>
+                                    </li>
+                                }
                             }
                         }
                     </ul>
@@ -41,12 +44,15 @@
                         {
                             foreach (var item in ViewBag.Quadrant2)
                             {
-                                <li class="row bd-highlight align-items-center">
-                                    <div class="col-5">@item.TaskName</div>
-                                    <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div>
-                                    <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a></div>
-                                    <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div>
-                                </li>
+                                if (item.Completed == 0)
+                                {
+                                    <li class="row bd-highlight align-items-center">
+                                        <div class="col-5">@item.TaskName</div>
+                                        <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div>
+                                        <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a></div>
+                                        <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div>
+                                    </li>
+                                }
                             }
                         }
                     </ul>
@@ -62,15 +68,16 @@
                         @if (ViewBag.Quadrant3 != null)
                         {
                               @foreach (var item in ViewBag.Quadrant3) 
-                              { 
-                                <li class="row bd-highlight align-items-center">
-                                    <div class="col-5">@item.TaskName</div> 
-                                    <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div> <!-- put this in for fun-->
-                                    <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a></div>
-                                    <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div>
-                                </li>
-
-
+                              {
+                                if (item.Completed == 0)
+                                {
+                                    <li class="row bd-highlight align-items-center">
+                                        <div class="col-5">@item.TaskName</div>
+                                        <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div>
+                                        <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a></div>
+                                        <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div>
+                                    </li>
+                                }
                               }   
                         }
                     </ul>
@@ -87,12 +94,15 @@
                         {
                               @foreach (var item in ViewBag.Quadrant4) 
                               {
-                                <li class="row bd-highlight align-items-center">
-                                    <div class="col-5">@item.TaskName</div>
-                                    <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div>
-                                    <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a></div>
-                                    <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div>
-                                </li>
+                                if (item.Completed == 0)
+                                {
+                                    <li class="row bd-highlight align-items-center">
+                                        <div class="col-5">@item.TaskName</div>
+                                        <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div>
+                                        <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a></div>
+                                        <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div>
+                                    </li>
+                                }
                               }   
                         }
                     </ul>
