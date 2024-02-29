@@ -13,9 +13,12 @@
                     <ul class="list-unstyled">
                         @if (ViewBag.Quadrant1 != null)
                         {
-                            foreach (var item in ViewBag.Quadrant1)
+                            @foreach (var item in ViewBag.Quadrant1)
                             {
-                                <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                                @if (item.Completed == 0)
+                                {
+                                    <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                                }
                             }
                         }
                     </ul>
@@ -30,9 +33,12 @@
                     <ul class="list-unstyled">
                         @if (ViewBag.Quadrant2 != null)
                         {
-                            foreach (var item in ViewBag.Quadrant2)
+                            @foreach (var item in ViewBag.Quadrant2)
                             {
-                                <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                                @if (item.Completed == 0)
+                                {
+                                    <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                                }
                             }
                         }
                     </ul>
@@ -47,10 +53,13 @@
                     <ul class="list-unstyled">
                         @if (ViewBag.Quadrant3 != null)
                         {
-                              @foreach (var item in ViewBag.Quadrant3) 
-                              {
-                                  <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
-                              }   
+                            @foreach (var item in ViewBag.Quadrant3)
+                            {
+                                @if (item.Completed == 0)
+                                {
+                                    <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                                }
+                            }
                         }
                     </ul>
                 </div>
@@ -66,7 +75,10 @@
                         {
                               @foreach (var item in ViewBag.Quadrant4) 
                               {
-                                  <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                                @if (item.Completed == 0)
+                                {
+                                    <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                                }
                               }   
                         }
                     </ul>
