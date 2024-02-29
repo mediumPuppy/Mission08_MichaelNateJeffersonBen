@@ -10,7 +10,7 @@ public partial class TaskData
     [Required]
     public int TaskID { get; set; }
 
-  
+
     public string TaskName { get; set; }
 
     public string? DueDate { get; set; }
