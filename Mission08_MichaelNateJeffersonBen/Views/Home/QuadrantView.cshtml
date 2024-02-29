@@ -1,5 +1,8 @@
-﻿@model List<TaskData>
+﻿@model List<TaskData> // passing in the task data to be used in the view
 
+<!-- Below is a quadrant view. 4 divs with lists inside of them using the grid layout to display neater 
+     You will notice that we always have to check that the data is there, otherwise it will display noth
+-->
 <div class="container mt-5">
     <div class="text-center mb-4">
         <h2>Stephen Covey's Time Management Matrix</h2>
@@ -15,7 +18,13 @@
                         {
                             foreach (var item in ViewBag.Quadrant1)
                             {
-                                <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                                <!-- a for each loop to display all data needced on this view-->
+                                <li class="row bd-highlight align-items-center">
+                                    <div class="col-5">@item.TaskName</div>
+                                    <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div>
+                                    <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a></div>
+                                    <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div>
+                                </li>
                             }
                         }
                     </ul>
@@ -32,7 +41,12 @@
                         {
                             foreach (var item in ViewBag.Quadrant2)
                             {
-                                <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                                <li class="row bd-highlight align-items-center">
+                                    <div class="col-5">@item.TaskName</div>
+                                    <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div>
+                                    <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a></div>
+                                    <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div>
+                                </li>
                             }
                         }
                     </ul>
@@ -48,8 +62,15 @@
                         @if (ViewBag.Quadrant3 != null)
                         {
                               @foreach (var item in ViewBag.Quadrant3) 
-                              {
-                                  <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                              { 
+                                <li class="row bd-highlight align-items-center">
+                                    <div class="col-5">@item.TaskName</div> 
+                                    <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div> <!-- put this in for fun-->
+                                    <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a></div>
+                                    <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div>
+                                </li>
+
+
                               }   
                         }
                     </ul>
@@ -66,7 +87,12 @@
                         {
                               @foreach (var item in ViewBag.Quadrant4) 
                               {
-                                  <li>@item.TaskName <a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a> <a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></li>
+                                <li class="row bd-highlight align-items-center">
+                                    <div class="col-5">@item.TaskName</div>
+                                    <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div>
+                                    <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskID">Edit</a></div>
+                                    <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div>
+                                </li>
                               }   
                         }
                     </ul>
