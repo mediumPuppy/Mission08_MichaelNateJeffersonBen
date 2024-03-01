@@ -34,7 +34,7 @@
             </div>
             <div class="col-md-6">
                 <label asp-for="Category" class="form-label">Category:</label>
-                <select asp-for="CategoryId">
+                <select asp-for="CategoryId" class="form-select">
                     <option value="">Select a Category</option>
                     @foreach (CategoryData m in ViewBag.Categories)//Looping through all the categores and making options in a dropdown
                     {
