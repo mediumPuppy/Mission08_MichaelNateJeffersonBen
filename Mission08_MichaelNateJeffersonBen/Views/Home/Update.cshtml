@@ -34,12 +34,12 @@
             </div>
             <div class="col-md-6">
                 <label asp-for="Category" class="form-label">Category:</label>
-                <select asp-for="Category" class="form-select">
-                    <option value="">Select An Option</option>
-                    <option value="Home">Home</option>
-                    <option value="School">School</option>
-                    <option value="Work">Work</option>
-                    <option value="Church">Church</option>
+                <select asp-for="CategoryId">
+                    <option value="">Select a Category</option>
+                    @foreach (CategoryData m in ViewBag.Categories)//Looping through all the categores and making options in a dropdown
+                    {
+                        <option value="@m.CategoryId">@m.CategoryName</option>
+                    }
                 </select>
             </div>
         </div>
@@ -48,6 +48,7 @@
             <div class="col-md-6">
                 <label asp-for="Completed" class="form-label">Completed:</label>
                 <select asp-for="Completed" class="form-select">
+                    <option value="">Select An Option</option>
                     <option value="1">Yes</option>
                     <option value="0">No</option>
                 </select>
