@@ -23,9 +23,22 @@
                                 {
                                     <li class="row bd-highlight align-items-center">
                                         <div class="col-5">@item.TaskName</div>
-                                        <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div>
+                                        <div class="col-3">
+                                            @{
+                                                string categoryName = "N/A";
+                                                foreach (CategoryData x in ViewBag.Categories)
+                                                {
+
+                                                    if (item.CategoryId == x.CategoryId)
+                                                    {
+                                                        categoryName = x.CategoryName != null ? x.CategoryName : "N/A";
+                                                    }
+                                                }
+                                                @categoryName
+                                            }
+                                        </div>
                                         <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskId">Edit</a></div>
-                                       @*  <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div> *@
+                                        <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskId">Delete</a></div>
                                     </li>
                                 }
                             }
@@ -48,9 +61,21 @@
                                 {
                                     <li class="row bd-highlight align-items-center">
                                         <div class="col-5">@item.TaskName</div>
-                                        <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div>
+                                        <div class="col-3">
+                                            @{
+                                                string categoryName = "N/A";
+                                                foreach (CategoryData x in ViewBag.Categories)
+                                                {
+                                                    if (item.CategoryId == x.CategoryId)
+                                                    {
+                                                        categoryName = x.CategoryName != null ? x.CategoryName : "N/A";
+                                                    }
+                                                }
+                                                @categoryName
+                                            }
+                                        </div>
                                         <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskId">Edit</a></div>
-                                       @*  <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div> *@
+                                        <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskId">Delete</a></div>
                                     </li>
                                 }
                             }
@@ -73,9 +98,21 @@
                                 {
                                     <li class="row bd-highlight align-items-center">
                                         <div class="col-5">@item.TaskName</div>
-                                        <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div>
+                                        <div class="col-3">
+                                            @{
+                                                string categoryName = "N/A";
+                                                foreach (CategoryData x in ViewBag.Categories)
+                                                {
+                                                    if (item.CategoryId == x.CategoryId)
+                                                    {
+                                                        categoryName = x.CategoryName != null ? x.CategoryName : "N/A";
+                                                    }
+                                                }
+                                                @categoryName
+                                            }
+                                        </div>
                                         <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskId">Edit</a></div>
-                                        @* <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div> *@
+                                        <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskId">Delete</a></div>
                                     </li>
                                 }
                             }
@@ -98,9 +135,21 @@
                                 {
                                     <li class="row bd-highlight align-items-center">
                                         <div class="col-5">@item.TaskName</div>
-                                        <div class="col-3">@(item.Category != null ? item.Category : "N/A")</div>
+                                        <div class="col-3">
+                                            @{
+                                                string categoryName = "N/A";
+                                                foreach (CategoryData x in ViewBag.Categories)
+                                                {
+                                                    if (item.CategoryId == x.CategoryId)
+                                                    {
+                                                        categoryName = x.CategoryName != null ? x.CategoryName : "N/A";
+                                                    }
+                                                }
+                                                @categoryName
+                                            }
+                                        </div>
                                         <div class="col-1"><a asp-controller="Home" asp-action="Edit" asp-route-id="@item.TaskId">Edit</a></div>
-                                        @* <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskID">Delete</a></div> *@
+                                        <div class="col-1"><a asp-controller="Home" asp-action="Delete" asp-route-id="@item.TaskId">Delete</a></div>
                                     </li>
                                 }
                             }

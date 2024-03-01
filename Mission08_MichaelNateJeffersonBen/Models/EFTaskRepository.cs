@@ -11,6 +11,7 @@ namespace Mission08_MichaelNateJeffersonBen.Models
         }
 
         public List<TaskData> TaskData => _context.TaskData.ToList();
+        public List<CategoryData> CategoryData => _context.CategoryData.ToList();
 
         public void AddTask(TaskData task)
         {
