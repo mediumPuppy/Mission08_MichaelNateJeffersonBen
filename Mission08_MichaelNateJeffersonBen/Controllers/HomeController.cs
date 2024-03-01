@@ -60,7 +60,7 @@ namespace Mission08_MichaelNateJeffersonBen.Controllers
         {
             //find the matching record in database to edit
             var recordToEdit = _repo.TaskData
-                .Single(x => x.TaskID == id);
+                .Single(x => x.TaskId == id);
 
             //return the add task page
             return View("Update", recordToEdit);
@@ -77,7 +77,7 @@ namespace Mission08_MichaelNateJeffersonBen.Controllers
         {
             //pull record to Delete
             var recordToDelete = _repo.TaskData
-                .Single(x => x.TaskID == id);
+                .Single(x => x.TaskId == id);
 
             //return Delete page
             return View(recordToDelete);
