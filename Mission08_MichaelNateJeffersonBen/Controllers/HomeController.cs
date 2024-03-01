@@ -21,6 +21,7 @@ namespace Mission08_MichaelNateJeffersonBen.Controllers
 
         public IActionResult QuadrantView()
         {
+            ViewBag.Categories = _repo.CategoryData;
             ViewBag.Quadrant1 = _repo.TaskData
                 .Where(x => x.Quadrant == "Important-Urgent")
                 .ToList();
@@ -39,6 +40,7 @@ namespace Mission08_MichaelNateJeffersonBen.Controllers
         [HttpGet]
         public IActionResult Update()
         {
+            ViewBag.Categories = _repo.CategoryData;
             return View(new TaskData());
         }
         [HttpPost]
