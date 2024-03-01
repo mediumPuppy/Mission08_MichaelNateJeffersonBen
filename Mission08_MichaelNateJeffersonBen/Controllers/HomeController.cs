@@ -54,6 +54,7 @@ namespace Mission08_MichaelNateJeffersonBen.Controllers
             }
             else
             {
+                ViewBag.Categories = _repo.CategoryData;
                 return View(response);
             }
 
@@ -64,6 +65,7 @@ namespace Mission08_MichaelNateJeffersonBen.Controllers
             var recordToEdit = _repo.TaskData
                 .Single(x => x.TaskId == id);
 
+            ViewBag.Categories = _repo.CategoryData;
             //return the add task page
             return View("Update", recordToEdit);
         }
