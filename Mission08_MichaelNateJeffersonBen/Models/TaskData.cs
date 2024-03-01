@@ -22,5 +22,5 @@ public partial class TaskData
 
     public int? Completed { get; set; }
 
-    public virtual CategoryData? Category { get; set; }
+    public virtual CategoryData? CategoryName { get; set; }
 }
